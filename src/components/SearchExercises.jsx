@@ -4,11 +4,12 @@ import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { getExercises, exerciseOptions } from "../utils/getExercises";
 import { HorizontalScrollbar } from ".";
 
-const exerciseURL = "https://exercisedb.p.rapidapi.com/exercises";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
+
+  const exerciseURL = "https://exercisedb.p.rapidapi.com/exercises";
 
   useEffect(() => {
     const getExercisesData = async () => {
